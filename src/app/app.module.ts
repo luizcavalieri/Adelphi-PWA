@@ -14,7 +14,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatMenuModule,
-  MatRadioModule
+  MatRadioModule,
+  MatCardModule
 } from '@angular/material';
 import {GeneralLayoutComponent} from './layout/general-layout/general-layout.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -34,9 +35,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule
   ],
-  entryComponents: [GeneralLayoutComponent],
+  // entryComponents: [GeneralLayoutComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

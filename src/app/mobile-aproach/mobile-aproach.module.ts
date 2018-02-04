@@ -7,7 +7,10 @@ import { ResultDetailComponent } from './result-detail/result-detail.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {
   MAT_LABEL_GLOBAL_OPTIONS,
-  MatIconModule, MatInputModule, MatRadioModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatRadioModule,
   MatSelectModule
 } from '@angular/material';
 
@@ -19,7 +22,8 @@ import {
     MatIconModule,
     MatSelectModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule
   ],
   declarations: [QuestionsFormComponent, ResultDetailComponent],
   exports: [QuestionsFormComponent, ResultDetailComponent],

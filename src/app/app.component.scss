@@ -29,3 +29,10 @@ header{
     bottom: 20px;
   };
 }
+
+main{
+  &.adelphi-dark-theme{
+    background: #000;
+    height: calc(100vh - 60px);
+  }
+}

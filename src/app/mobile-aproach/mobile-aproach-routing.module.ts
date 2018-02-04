@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {QuestionsFormComponent} from './questions-form/questions-form.component';
-import {MAT_LABEL_GLOBAL_OPTIONS} from '@angular/material';
+import {ResultDetailComponent} from './result-detail/result-detail.component';
 
 const routes: Routes = [
   {

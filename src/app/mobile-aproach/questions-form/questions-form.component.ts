@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatFormFieldControl} from '@angular/material';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-questions-form',
@@ -7,8 +8,14 @@ import {MatFormFieldControl} from '@angular/material';
   styleUrls: ['./questions-form.component.scss']
 })
 export class QuestionsFormComponent implements OnInit {
+  options: FormGroup;
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.options = fb.group({
+      hideRequired: false,
+      floatLabel: 'auto',
+    });
+  }
 
   ngOnInit() {
   }
