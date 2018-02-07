@@ -7,12 +7,14 @@ import { ResultDetailComponent } from './result-detail/result-detail.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {
   MAT_LABEL_GLOBAL_OPTIONS,
-  MatCardModule,
+  MatCardModule, MatCheckboxModule,
   MatIconModule,
   MatInputModule,
   MatRadioModule,
-  MatSelectModule
+  MatSelectModule, MatSlideToggleModule
 } from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms';
+import {Data} from './data.service';
 
 @NgModule({
   imports: [
@@ -23,12 +25,27 @@ import {
     MatSelectModule,
     MatInputModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatSlideToggleModule
   ],
-  declarations: [QuestionsFormComponent, ResultDetailComponent],
-  exports: [QuestionsFormComponent, ResultDetailComponent],
+  declarations: [
+    QuestionsFormComponent,
+    ResultDetailComponent
+  ],
+  exports: [
+    QuestionsFormComponent,
+    ResultDetailComponent
+  ],
   providers: [
-    {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: 'always'}}
+    Data,
+    {
+      provide: MAT_LABEL_GLOBAL_OPTIONS,
+      useValue: {
+        float: 'always'
+      }
+    }
   ]
 })
 export class MobileApproachModule { }

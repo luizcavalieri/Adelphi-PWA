@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: 'mobile-approach',
     component: QuestionsFormComponent
+  },
+  {
+    path: 'results',
+    component: ResultDetailComponent
   }
 ];
 

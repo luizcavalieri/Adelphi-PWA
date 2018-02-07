@@ -1,42 +1,47 @@
 <section class="section--questions-form">
-  <form action="" id="questionsForm">
 
-
+  <form id="questionsForm" (ngSubmit)="checkResults()" [formGroup]="questionnaire">
     <mat-form-field floatLabel="auto" class="">
-      <!--<mat-placeholder>Enter the name of your company</mat-placeholder>-->
       <input matInput
              class=""
              placeholder="Your company name"
-             id="company-name"
-             type="text">
+             id="companyName"
+             type="text"
+             formControlName="companyNameTxt"
+             [(ngModel)]="answers.companyName">
     </mat-form-field>
 
     <mat-form-field floatLabel="auto" class="">
-      <!--<mat-placeholder>Enter the name of your company</mat-placeholder>-->
       <input matInput
              placeholder="Your full name"
-             id="full-name"
-             type="text">
+             id="fullName"
+             type="text"
+             formControlName="fullNameTxt"
+             [(ngModel)]="answers.fullName">
     </mat-form-field>
 
     <mat-form-field floatLabel="auto" class="">
-      <!--<mat-placeholder>Enter the name of your company</mat-placeholder>-->
       <input matInput
              placeholder="Your email"
              id="email"
-             type="text">
+             type="text"
+             formControlName="emailTxt"
+             [(ngModel)]="answers.email">
     </mat-form-field>
 
     <mat-form-field floatLabel="auto" class="">
-      <!--<mat-placeholder>Enter the name of your company</mat-placeholder>-->
       <input matInput
              placeholder="Phone number"
              id="phone"
-             type="text">
+             type="text"
+             formControlName="phoneTxt"
+             [(ngModel)]="answers.phone">
     </mat-form-field>
 
     <mat-form-field floatLabel="auto">
-      <mat-select placeholder="Select one option *">
+      <mat-select placeholder="Select one option *"
+                  formControlName="projectTypeSelect"
+                  [(ngModel)]="answers.projectType">
         <mat-option value="0"></mat-option>
         <mat-option value="1">Option 1</mat-option>
         <mat-option value="2">Option 2</mat-option>
@@ -46,14 +51,37 @@
         <mat-option value="6">Option 6</mat-option>
       </mat-select>
     </mat-form-field>
+    <br>
 
-    <mat-radio-group>
-      <mat-radio-button value="0">Option One</mat-radio-button>
-      <mat-radio-button value="1">Option Two</mat-radio-button>
+    <mat-radio-group >
+      <mat-radio-button value="1">Option One</mat-radio-button>
+      <mat-radio-button value="2">Option Two</mat-radio-button>
     </mat-radio-group>
 
+    <br>
+    <mat-checkbox type="checkbox"
+                  formControlName="featNotificationChx"
+                  [(ngModel)]="answers.featNotification">
+      Check to test
+    </mat-checkbox>
+    <br>
+    <mat-slide-toggle
+      formControlName="hasDueRdoBtn"
+      [(ngModel)]="answers.hasDue">
+      Slide here!
+    </mat-slide-toggle>
 
+    <button mat-raised-button
+            type="submit"
+            color="primary">
+      <mat-icon aria-label="Example icon-button with a heart icon">
+        arrow_forward_ios
+      </mat-icon>
+    </button>
 
   </form>
+
+  <br />
+  <p>{{answers | json }}</p>
 
 </section>

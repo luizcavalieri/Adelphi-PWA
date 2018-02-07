@@ -4,7 +4,7 @@ import {AppComponent} from './app.component';
 import {QuestionsFormComponent} from './mobile-aproach/questions-form/questions-form.component';
 
 const indexRoute: Route = {
-  path: '/test',
+  path: '',
   redirectTo: '/mobile-approach',
   pathMatch: 'full'
 };

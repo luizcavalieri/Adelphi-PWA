@@ -15,10 +15,14 @@ import {
   MatInputModule,
   MatMenuModule,
   MatRadioModule,
-  MatCardModule
+  MatCardModule,
+  MatCheckboxModule,
+  MatSlideToggleModule
 } from '@angular/material';
 import {GeneralLayoutComponent} from './layout/general-layout/general-layout.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ReactiveFormsModule} from '@angular/forms';
+import {Data} from './mobile-aproach/data.service';
 
 @NgModule({
   declarations: [
@@ -36,10 +40,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule,
   ],
-  // entryComponents: [GeneralLayoutComponent],
-  providers: [],
+  entryComponents: [GeneralLayoutComponent],
+  providers: [
+    Data
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
